@@ -2,4 +2,4 @@
 
 Crepes.dev main website.
 
-[crepes.dev]: https://crepes.dev
+[crepes.dev]: HTTPS://crepes.dev
