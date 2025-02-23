@@ -7,8 +7,8 @@ const f = "modulepreload",
 		let a = Promise.resolve();
 		if (c && c.length > 0) {
 			document.getElementsByTagName("link");
-			const r = document.querySelector("meta[property=csp-nonce]"),
-				e = r?.nonce || r?.getAttribute("nonce");
+			const n = document.querySelector("meta[property=csp-nonce]"),
+				e = n?.nonce || n?.getAttribute("nonce");
 			a = Promise.allSettled(
 				c.map((t) => {
 					if (((t = h(t)), t in l)) return;
@@ -16,19 +16,19 @@ const f = "modulepreload",
 					const s = t.endsWith(".css"),
 						u = s ? '[rel="stylesheet"]' : "";
 					if (document.querySelector(`link[href="${t}"]${u}`)) return;
-					const n = document.createElement("link");
+					const r = document.createElement("link");
 					if (
-						((n.rel = s ? "stylesheet" : f),
-						s || (n.as = "script"),
-						(n.crossOrigin = ""),
-						(n.href = t),
-						e && n.setAttribute("nonce", e),
-						document.head.appendChild(n),
+						((r.rel = s ? "stylesheet" : f),
+						s || (r.as = "script"),
+						(r.crossOrigin = ""),
+						(r.href = t),
+						e && r.setAttribute("nonce", e),
+						document.head.appendChild(r),
 						s)
 					)
 						return new Promise((m, p) => {
-							n.addEventListener("load", m),
-								n.addEventListener("error", () =>
+							r.addEventListener("load", m),
+								r.addEventListener("error", () =>
 									p(
 										new Error(
 											`Unable to preload CSS for ${t}`,
@@ -39,19 +39,19 @@ const f = "modulepreload",
 				}),
 			);
 		}
-		function i(r) {
+		function i(n) {
 			const e = new Event("vite:preloadError", { cancelable: !0 });
-			if (((e.payload = r), window.dispatchEvent(e), !e.defaultPrevented))
-				throw r;
+			if (((e.payload = n), window.dispatchEvent(e), !e.defaultPrevented))
+				throw n;
 		}
-		return a.then((r) => {
-			for (const e of r || []) e.status === "rejected" && i(e.reason);
+		return a.then((n) => {
+			for (const e of n || []) e.status === "rejected" && i(e.reason);
 			return d().catch(i);
 		});
 	};
 (
 	await E(async () => {
-		const { initializeApp: o } = await import("./index.esm.Cu7LdMsX.js");
+		const { initializeApp: o } = await import("./index.esm.D9h2tUuG.js");
 		return { initializeApp: o };
 	}, [])
 ).initializeApp({
@@ -64,4 +64,4 @@ const f = "modulepreload",
 	appId: "1:451350706276:web:b8dcaa0d46ce2aca058771",
 	measurementId: "G-9E2P7HPRNM",
 });
-//# sourceMappingURL=Base.astro_astro_type_script_index_0_lang.BN2Bi06d.js.map
+//# sourceMappingURL=Base.astro_astro_type_script_index_0_lang.CHHzqNhJ.js.map
