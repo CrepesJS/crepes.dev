@@ -51,7 +51,7 @@ const f = "modulepreload",
 	};
 (
 	await E(async () => {
-		const { initializeApp: o } = await import("./index.esm.D9h2tUuG.js");
+		const { initializeApp: o } = await import("./index.esm.CDlMbkfU.js");
 		return { initializeApp: o };
 	}, [])
 ).initializeApp({
@@ -64,4 +64,4 @@ const f = "modulepreload",
 	appId: "1:451350706276:web:b8dcaa0d46ce2aca058771",
 	measurementId: "G-9E2P7HPRNM",
 });
-//# sourceMappingURL=Base.astro_astro_type_script_index_0_lang.CHHzqNhJ.js.map
+//# sourceMappingURL=Base.astro_astro_type_script_index_0_lang.ClhA5AL1.js.map
